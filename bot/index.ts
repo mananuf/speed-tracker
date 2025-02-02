@@ -21,6 +21,7 @@ bot.command('help', (ctx: any) => {
 });
 
 bot.command('webapp', (ctx: any) => {
+    console.log(WEBAPP_URL)
   ctx.reply('Open Web App', {
     reply_markup: {
       inline_keyboard: [[
