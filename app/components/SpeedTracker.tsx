@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { getDistance, getSpeed } from 'geolib';
-import { Circle, Map } from 'lucide-react';
+import { Circle } from 'lucide-react';
 
 interface Position {
   latitude: number;
@@ -22,6 +22,7 @@ const SpeedTracker = () => {
 
   const calculateSpeed = useCallback((positions: Position[]) => {
     if (positions.length < 2) return 0;
+    console.log(getSpeed)
 
     const lastTwo = positions.slice(-2);
     const distance = getDistance(
